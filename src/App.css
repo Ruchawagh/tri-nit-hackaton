@@ -5,6 +5,7 @@
   padding: 0;
   font-family: 'Mukta', sans-serif;
 }
+
 body{
   background: url("https://wallpaperaccess.com/full/1598226.jpg");
   background-size: cover;
@@ -59,6 +60,10 @@ h1 p a button{
   font-weight: 600;
   color: yellowgreen;
 } 
+.goog-te-combo{
+  padding: 5px;
+  border-radius: 15px;
+}
 
 .navbar-brand {
   color: black;
