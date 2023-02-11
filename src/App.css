@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
+
+*{
+  font-family: 'Mukta', sans-serif;
+}
+body{
+  background: url("https://wallpaperaccess.com/full/1598226.jpg");
+  background-size: cover;
+  opacity: 0.8;
+  /* background-image: ; */
+}
+h1 p a button{
+  opacity: 1 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 25px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
+  background-color:darkolivegreen !important;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+}
+.navbar-brand{
+  color: rgb(255, 255, 86);
+}
+.navbar-brand:hover{
+  color: rgb(255, 255, 86);
+}
+.form-check-label{
+  color: rgb(255, 255, 86);
+  width: 60px;
+}
+
+#mainblock{
+  display: flex;
+  width: 100%;
+}
+.block{
+  width: 50vw;
+  height: 90vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* height: calc(100vw-66px); */
 }
-
-.App-link {
-  color: #61dafb;
+.farmerBlock{
+  /* background-color:crimson; */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gardenerBlock{
+  /* background-color:darkkhaki; */
 }
