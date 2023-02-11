@@ -22,7 +22,7 @@ function Navbar() {
 
                 <div className="form-check form-switch">
                     <input className="form-check-input" onClick={changeLang} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
-                        <label className="form-check-label"  htmlFor="flexSwitchCheckDefault">{lang}</label>
+                        <label className="form-check-label" style={{"color":"black"}}  htmlFor="flexSwitchCheckDefault">{lang}</label>
                 </div>
             </div>
         </nav>

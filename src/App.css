@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
 
 *{
+  margin: 0;
+  padding: 0;
   font-family: 'Mukta', sans-serif;
 }
 body{
   background: url("https://wallpaperaccess.com/full/1598226.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   opacity: 0.8;
   /* background-image: ; */
 }
@@ -18,7 +21,7 @@ h1 p a button{
   border-radius: 50%;
   margin: 0 25px;
 }
-.navbar{
+/* .navbar{
   background-color:darkolivegreen !important;
   display: flex;
   justify-content: space-evenly;
@@ -28,7 +31,7 @@ h1 p a button{
 }
 .navbar-brand:hover{
   color: rgb(255, 255, 86);
-}
+} */
 .form-check-label{
   color: rgb(255, 255, 86);
   width: 60px;
@@ -36,6 +39,8 @@ h1 p a button{
 
 #mainblock{
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 .block{
@@ -46,9 +51,38 @@ h1 p a button{
   justify-content: center;
   /* height: calc(100vw-66px); */
 }
-.farmerBlock{
-  /* background-color:crimson; */
+.card-body{
+  border-radius: 30px;
 }
-.gardenerBlock{
-  /* background-color:darkkhaki; */
+.nav-link {
+  color: black;
+  font-weight: 600;
+  color: yellowgreen;
+} 
+
+.navbar-brand {
+  color: black;
+  font-size: 30px;
+  font-weight: 800;
+  color: yellowgreen;
+}
+
+.btnCurrFarm{
+  background-color: green !important;
+  color: white;
+  font-weight: normal !important;
+}
+.btnCurrGard{
+  background-color: #daa400 !important;
+  color: white;
+  font-weight: normal !important;
+}
+@media screen and (max-width:800px) {
+  #mainblock{
+    flex-direction: column;
+  }
+  .block{
+    width: 80vw;
+    height: auto;
+  }
 }

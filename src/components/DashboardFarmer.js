@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Navbar from './Navbar';
+import Navbar2 from './Navbar2';
 
 function DashboardFarmer() {
   return (
     <>
-    <Navbar/>
+    <Navbar2/>
     <div>DashboardFarmer</div>
     </>
   )

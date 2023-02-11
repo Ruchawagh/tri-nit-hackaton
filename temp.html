@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <style>
+        css- * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .nav-link {
+            color: black;
+            font-weight: 600;
+            color: yellowgreen;
+        }
+
+        .navbar-brand {
+            color: black;
+            font-size: 30px;
+            font-weight: 800;
+            color: yellowgreen;
+
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 55%;
+            transform: translateY(-80%);
+            left: -8%;
+        }
+
+        .carousel-caption h1 {
+            font-size: 70px;
+            font-weight: 400;
+            color: whitesmoke;
+        }
+
+        .carousel-caption p {
+            color: whitesmoke;
+            font-weight: 600;
+        }
+
+        .btn0 {
+            background-color: red;
+            height: 45px;
+            width: 150px;
+            color: white;
+            outline: none;
+            border: none;
+
+        }
+
+        .btn0:hover {
+            background-color: white;
+            color: red;
+            transition: 0.3s;
+
+        }
+
+        /* --------------------------------------------------------------------------------------- */
+
+        .sub {
+            background-color: gray;
+        }
+
+        .sub input {
+            height: 51px;
+            width: 50%;
+            color: yellowgreen;
+            outline: none;
+            padding: 10px;
+
+        }
+
+        .btn1 {
+            height: 50px;
+            width: 50px;
+            color: white;
+            background-color: yellow;
+            outline: none;
+            border: none;
+            margin-left: -2px;
+        }
+
+        .btn1:hover {
+            background-color: black;
+            color: white;
+            transition: 0.5s
+        }
+
+        .fas {
+            font-size: 32px;
+
+        }
+
+        /* ----------------------------------------------------------------------------------------- */
+
+        .collection span {
+            color: yellowgreen;
+            font-size: 25px;
+            font-weight: 800;
+            padding-left: 5px;
+        }
+
+        .collection input {
+            position: absolute;
+            height: 45px;
+            width: 110px;
+            background-color: yellowgreen;
+            color: white;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            text-align: center;
+            top: 35%;
+            left: 30%;
+            opacity: 0;
+        }
+        button{
+            border-radius: 10px;
+        }
+        .carousel-item img{
+            width: 100vw;
+        }
+
+        .collection .card:hover input {
+            opacity: 1;
+            transition: 1s;
+
+        }
+
+        .collection input:hover {
+            background-color: gray;
+            transition: 0.5s;
+        }
+
+        /* ------------------------------------------------------------------------------------------------- */
+        .parallex {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://wallpaperaccess.com/full/1598226.jpg) no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            width: 100%;
+
+
+        }
+
+        .parallex h1 {
+            font-size: 60px;
+            font-weight: 700;
+
+
+        }
+
+        .parallex p {
+            font-size: 25px;
+        }
+        .card{
+            height: 300px;
+            text-align: center;
+        }
+        .card img{
+            height: 90%;
+            object-fit: cover;
+        }
+    </style>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/b2a1a005b2.js" crossorigin="anonymous"></script>
+
+    <title>Farmer's Website</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bh-white">
+        <a class="navbar-brand pl-5" href="#">SYNERGY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link pr-5" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pr-5" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pr-5" href="#">Logout</a>
+                </li>
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link pr-5" href="#"></a>
+
+                </li> -->
+            </ul>
+
+        </div>
+    </nav>
+    <!-- End of NavBar -->
+    <!-- data interval -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="2500">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://c4.wallpaperflare.com/wallpaper/549/835/824/nature-wheat-field-cereal-wallpaper-preview.jpg"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <!-- create a container -->
+                    <div class="container">
+                        <!-- Add classes  -->
+                        <div class="row justify-content-start text-left">
+                            <div class="col-lg-8 mx-auto">
+                                <h2>We provide platform to strenghten agriculture prospects</h2>
+
+                                <button class="btn0 mt-3 ml-2">View</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHPg-4dHp6Gec6G7ve8HstzRH0PkkF6VueSQ&usqp=CAU"
+                    class="d-block w-100" alt="...">
+                <!-- add css styling -->
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="container">
+                        <div class="row justify-content-start text-left">
+                            <div class="col-lg-8 mx-auto">
+                                <h2>Cultivating new crops to make farmers increase profits</h2>
+
+                                <button class="btn0 mt-3 ml-2">View</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!-- <img src="https://images.ctfassets.net/3s5io6mnxfqz/CEokA4Lxy5zkBBX88uiDQ/f1da14c73d0d82fd7217ac3166aa7931/AdobeStock_254333414.jpeg" alt="..."> -->
+                <img src="https://images.unsplash.com/photo-1497990571654-77aa8ec36038?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=MnwxfDB8MXxyYW5kb218MHx8Z2FyZGVuaW5nfHx8fHx8MTY3NjExMDI0Mw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="...">
+
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="container">
+                        <div class="row justify-content-start text-left">
+                            <div class="col-lg-8 mx-auto">
+                                <h2>Increasing and Enriching the esscence of gardening</h2>
+
+                                <button class="btn0 mt-3 ml-2">View</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        
+    </div>
+
+        <section class="collection">
+            <div class="container py-5">
+                <h1 class="text-center">Programmes & Schemes</h1>
+                <div class="row py-5">
+                    <div class="col-lg-3" >
+                        <div class="card mb-3">
+                            <img src="https://i.ytimg.com/vi/JHKzr-jHNC4/maxresdefault.jpg" class="img-fluid mb-3"
+                                alt="">
+                            <input type="button" value="View">
+                            <h5>Weather Based Crop Insurance Scheme</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card mb-3">
+                            <img src="https://cropbag.in/wp-content/uploads/2020/07/Soil-Health-Card-Scheme.png"
+                                class="img-fluid mb-3" alt="">
+                            <input type="button" value="View">
+                            <h5>Soil health card scheme</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card mb-3">
+                            <img src="http://www.agrilearner.com/wp-content/uploads/2019/05/img2.jpg"
+                                class="img-fluid mb-3" alt="">
+                            <input type="button" value="View">
+                            <h5>National agriculture market</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card mb-3">
+                            <img src="https://khetigaadi.com/blog/wp-content/uploads/2021/05/Crop-Insurance-1.jpg"
+                                class="img-fluid mb-3" alt="">
+                            <input type="button" value="view">
+                            <h5>Crop insurance scheme</h5>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="parallex py-5">
+            <div class="container py-5 text-white text-center">
+                <div class="row py-3">
+                    <div class="col-lg-9 mx-auto">
+                        <h1>SYNERGY'S MISSION</h1>
+                        <h4>Harvesting a better future with New advancements and technology</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+    </section>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+css- * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav-link {
+    color: black;
+    font-weight: 600;
+    color: yellowgreen;
+    /* background-color: ; */
+
+}
+
+.navbar-brand {
+    color: black;
+    font-size: 30px;
+    font-weight: 800;
+    color: yellowgreen;
+
+}
+.btnCurr
+
+.carousel-caption {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-80%);
+    left: -8%;
+}
+
+.carousel-caption h1 {
+    font-size: 70px;
+    font-weight: 400;
+    color: whitesmoke;
+}
+
+.carousel-caption p {
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.btn0 {
+    background-color: red;
+    height: 45px;
+    width: 150px;
+    color: white;
+    outline: none;
+    border: none;
+
+}
+
+.btn0:hover {
+    background-color: white;
+    color: red;
+    transition: 0.3s;
+
+}
