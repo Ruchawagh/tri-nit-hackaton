@@ -7,6 +7,8 @@ import {
   Route,
 } from "react-router-dom";
 import Signup from './components/Signup';
+import Blogs from './components/Blogs';
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
       <Route path="/login" element={<Login/>} />
       <Route path="/signup" element={<Signup/>} />
       <Route path="/dashboard" element={<DashboardFarmer/>} />
+      <Route path="/blogs" element={<Blogs/>} />
     </Routes>
     
     </>
