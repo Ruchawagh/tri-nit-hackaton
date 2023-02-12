@@ -9,7 +9,7 @@
 body{
   background: url("https://wallpaperaccess.com/full/1598226.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   opacity: 0.8;
   /* background-image: ; */
 }
