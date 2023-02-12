@@ -1,0 +1,19 @@
+{
+    "1": "Arid",
+    "2": "Coastal",
+    "3": "Hill &Mountain",
+    "4": "Irrigated",
+    "5": "Rainfed",
+    "1.1": "Pear Millet",
+    "1.2": "Pear Millet-Oilseeds",
+    "2.1": "Rice-Groundnut-fruits",
+    "2.2": "Coconut-Rice-Fruits",
+    "3.1": "Horticulture",
+    "3.2": "Rice-Maize-Fruits",
+    "4.1": "Rice-Wheat",
+    "4.2": "Cotton-Wheat",
+    "4.3": "Sugarcane-Wheat",
+    "5.1": "Rice",
+    "5.2": "Coarse cereal",
+    "5.3": "Oilseed"
+}

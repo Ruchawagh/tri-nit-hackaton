@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Navbar2 from './Navbar2';
 import jsondata from '../csvjson.json'
+import dataRef from '../dataref.json'
 
 
 function DashboardFarmer() {
@@ -9,6 +10,24 @@ function DashboardFarmer() {
   let { city, temp, max_temp, min_temp, feels_like, desc, sunrise, sunset, speed, hum, deg } = details;
   const [weather, setWeather] = useState([])
   let APIkey = "82b1f8bcc38a41a3a4942618231202"
+
+  const oneData = {
+    "State Code": 20,
+    "Indian Census State Code 2011": 280,
+    "State Name": "Telangana",
+    "District Code": 60,
+    "Indian Census District Code 2011": 540,
+    "DistrictName": "Hanumakonda",
+    "ICRISAT Indian Id": 3222,
+    "SAT/NONSAT District": 1,
+    "Region Code": 3,
+    "Region Name": "Telangana region",
+    "Agro Ecological Zones ICRISAT": 3,
+    "Agro Ecological Zones NATP": 5,
+    "AEZ Production Zones NATP": 5.1,
+    "Latitude": 18,
+    "Longitude": 79.6
+  }
 
   const getWeather = (cityname) => {
     cityname = details.location
@@ -54,9 +73,16 @@ function DashboardFarmer() {
     setDetails(json)
 
   }
-  const getCSV = () => {
-    console.log(jsondata);
-  }
+
+  // const getJsonData = ()=>{
+  //   let arr = jsondata.filter((e)=>{
+  //     return e.DistrictName===details.location
+  //   }).map((filteredName)=>{
+  //     console.log(filteredName);
+  //   })
+  //   console.log(JSON.stringify({"name":"ShivaRK"}));
+  //   return JSON.stringify(arr);
+  // }
 
   let navigate = useNavigate()
   useEffect(() => {
@@ -65,7 +91,7 @@ function DashboardFarmer() {
     }
     getUserData()
     getWeather(details.location)
-    getCSV()
+    // getJsonData()
   }, [navigate, details.location])
 
   return (
@@ -177,7 +203,14 @@ function DashboardFarmer() {
           </main>
         </div>
       </div>
-      <div className="container">
+      <div className="container bg-light rounded m-5 p-2">
+        { <h1 className='mx-5'>You are at {details.location}</h1>}
+        <h3 className='mx-4'>Your Region: {oneData['Region Name']}</h3>
+          <h6 className='mx-4'>AEZ Production Zones NATP : {oneData['AEZ Production Zones NATP']}</h6>
+          <h6 className='mx-4'>Crops Predicted are {dataRef[oneData['AEZ Production Zones NATP']]}</h6>
+          <h6 className='mx-4'>Your Latitude: {oneData['Latitude']}</h6>
+          <h6 className='mx-4'>Your Longitude: {oneData['Longitude']}</h6>
+          <h6 className='mx-4'>Your ICRISAT Indian Id : {oneData['ICRISAT Indian Id']}</h6>
       </div>
     </>
   )

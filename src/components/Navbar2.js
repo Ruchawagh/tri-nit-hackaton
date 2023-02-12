@@ -30,6 +30,9 @@ function Navbar2() {
                             <Link className="nav-link pr-5" style={{fontWeight:"normal"}} to="/">Home</Link>
                         </li>
                         <li className="nav-item mx-3" >
+                            <Link className="nav-link pr-5 " style={{fontWeight:"normal"}} to="/schemes">Schemes</Link>
+                        </li>
+                        <li className="nav-item mx-3" >
                             <Link className="nav-link pr-5 " style={{fontWeight:"normal"}} to="/blogs">Blog</Link>
                         </li>
                         <li className="nav-item mx-3" >

@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Signup from './components/Signup';
 import Blogs from './components/Blogs';
+import Schemes from './components/Schemes';
+
 
 
 
@@ -20,6 +22,7 @@ function App() {
       <Route path="/signup" element={<Signup/>} />
       <Route path="/dashboard" element={<DashboardFarmer/>} />
       <Route path="/blogs" element={<Blogs/>} />
+      <Route path="/schemes" element={<Schemes/>} />
     </Routes>
     
     </>
