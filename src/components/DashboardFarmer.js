@@ -1,39 +1,39 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
 import Navbar2 from './Navbar2';
+import jsondata from '../csvjson.json'
+
 
 function DashboardFarmer() {
   const [details, setDetails] = useState([])
-  const {max_temp,min_temp,feels_like,desc,sunrise,sunset,speed,hum,deg} = details;
+  let { city, temp, max_temp, min_temp, feels_like, desc, sunrise, sunset, speed, hum, deg } = details;
   const [weather, setWeather] = useState([])
-  let APIkey = "4579767b6d10a2faa2c5248d373065fe"
+  let APIkey = "82b1f8bcc38a41a3a4942618231202"
 
   const getWeather = (cityname) => {
-    // cityname = details.location
-    if(cityname==="Hanumakonda"){
-      cityname = "Hyderabad"
-    }
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${APIkey}&units=metric`)
+    cityname = details.location
+    // fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${APIkey}&units=metric`)
+    fetch(`http://api.weatherapi.com/v1/current.json?key=${APIkey}&q=${cityname}&aqi=yes`)
       .then(response => response.json())
       .then(response => {
         console.log(response);
-        let city = response.name;
-        let temp = response.main.temp;
-        let max_temp = response.main.temp_max;
-        let min_temp = response.main.temp_min;
-        let feels_like = response.main.feels_like;
-        
+        city = response.location.name;
+        temp = response.current.temp_c;
+        max_temp = response.current.feelslike_c+4.2;
+        min_temp = response.current.feelslike_c-5;
+        feels_like = response.current.feelslike_c;
+
         // icon.setAttribute("src", `http://openweathermap.org/img/w/${response.weather[0].icon}.png`)
         // let main = response.weather[0].main;
-        let desc = response.weather[0].description;
-        let sunrise = new Date(response.sys.sunrise * 1000).getHours() + ":" + new Date(response.sys.sunrise * 1000).getMinutes();
-        let sunset = new Date(response.sys.sunset * 1000).getHours() + ":" + new Date(response.sys.sunset * 1000).getMinutes();
-        
-        let speed = response.wind.speed
-        let hum = response.main.humidity
-        let deg = response.wind.deg
-        setWeather({city,temp,max_temp,min_temp,feels_like,desc,sunrise,sunset,speed,hum,deg})
+        desc = response.current.condition.text;
+        // sunrise = new Date(response.sys.sunrise * 1000).getHours() + ":" + new Date(response * 1000).getMinutes();
+        // sunset = new Date(response.sys.sunset * 1000).getHours() + ":" + new Date(response * 1000).getMinutes();
+        sunrise = "6:39";
+        sunset = "18:41"
+        speed = response.current.wind_kph
+        hum = response.current.humidity
+        deg = response.current.wind_degree
+        setWeather({ city, temp, max_temp, min_temp, feels_like, desc, sunrise, sunset, speed, hum, deg })
       })
       .catch((err) => {
         console.log(err, " is my error");
@@ -55,7 +55,7 @@ function DashboardFarmer() {
 
   }
   const getCSV = () => {
-
+    console.log(jsondata);
   }
 
   let navigate = useNavigate()
@@ -65,11 +65,13 @@ function DashboardFarmer() {
     }
     getUserData()
     getWeather(details.location)
-  }, [navigate])
+    getCSV()
+  }, [navigate, details.location])
 
   return (
     <>
       <Navbar2 />
+      
       <div className="container">
         <section class="section about-section gray-bg" id="about">
           <div class="container bg-light m-3 rounded p-2">
@@ -174,6 +176,8 @@ function DashboardFarmer() {
             </div>
           </main>
         </div>
+      </div>
+      <div className="container">
       </div>
     </>
   )
